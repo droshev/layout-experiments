@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 
 
 const routes: Routes = [{
-  path: '',
-  component: AppComponent
-}, {
   path: 'horizontal',
   component: HorizontalLayoutComponent
 }, {
   path: 'dynamic',
   component: DynamicLayoutComponent
+}, {
+  path: '',
+  component: AppComponent
 }];
 
 @NgModule({
