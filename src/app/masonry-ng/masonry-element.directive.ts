@@ -47,9 +47,12 @@ export class MasonryElement implements AfterViewInit, OnDestroy {
         this.destroy();
     }
 
-    destroy() { }
+    destroy() {
+        this._parent.remove(this.element.nativeElement);
+    }
 
     updateLayout() {
+        this._parent.layout();
         console.log("mutation observed: IMPL");
     }
 }

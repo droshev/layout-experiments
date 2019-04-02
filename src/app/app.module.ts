@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { DynamicLayoutComponent } from './dynamic-layout/dynamic-layout.component';
 import { HorizontalLayoutComponent } from './horizontal-layout/horizontal-layout.component';
 import { MasonryModule } from './masonry-ng/masonry.module';
+import { MasonryElement } from './masonry-ng/masonry-element.directive';
+import { MasonryWrapperComponent } from './masonry-ng/masonty-wrapper.component'
 
 
 @NgModule({
@@ -13,13 +15,15 @@ import { MasonryModule } from './masonry-ng/masonry.module';
     AppComponent,
     DynamicLayoutComponent,
     HorizontalLayoutComponent,
+    MasonryElement,
+    MasonryWrapperComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MasonryModule
+    //MasonryModule
   ],
-  providers: [MasonryModule],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
