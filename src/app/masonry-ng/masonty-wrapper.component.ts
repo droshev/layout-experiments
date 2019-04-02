@@ -23,12 +23,14 @@ export class MasonryWrapperComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         console.log("----2");
-        this.options.itemSelector = 'masonry, [masonry]';
+        this.options.columnWidth = 200;
+        this.options.itemSelector = 'masonry-element';
+        this.options.gutter = 20;
 
         if (this.element.nativeElement.tagName === 'MASONRY') {
             this.element.nativeElement.style.display = 'block';
         }
-
+        console.log('--------element:', this.options);
         this.masonry = new masonry(this.element.nativeElement, this.options);
         console.log('masonry initialized: ', this.masonry);
 

@@ -12,7 +12,7 @@ import { MasonryWrapperComponent } from './masonty-wrapper.component';
 
 
 @Directive({
-    selector: 'mansonry-element'
+    selector: 'masonry-element'
 })
 export class MasonryElement implements AfterViewInit, OnDestroy {
     constructor(private element: ElementRef, @Inject(forwardRef(() => MasonryWrapperComponent)) private _parent: MasonryWrapperComponent) {
@@ -21,6 +21,7 @@ export class MasonryElement implements AfterViewInit, OnDestroy {
 
 
     ngAfterViewInit(): void {
+        this._parent.add(this.element.nativeElement);
         this.watchForChanges();
     }
 
