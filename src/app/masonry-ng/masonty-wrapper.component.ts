@@ -1,10 +1,11 @@
-import { Component, ElementRef, Output, EventEmitter, OnInit, OnDestroy } from "@angular/core";
+import { Component, ElementRef, Output, EventEmitter, OnInit, OnDestroy, Inject } from "@angular/core";
 
 
 var masonry = require('masonry-layout');
 
+
 @Component({
-    selector: 'masonry, [masonry]',
+    selector: 'masonry',
     template: '<ng-content></ng-content>'
 })
 export class MasonryWrapperComponent implements OnInit, OnDestroy {
